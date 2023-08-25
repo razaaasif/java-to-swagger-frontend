@@ -1,15 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { AppComponent } from './app.component';
 
-const routes: Routes = [
-  { path: '**', component: AppComponent }, // Redirect all paths to AppComponent
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
